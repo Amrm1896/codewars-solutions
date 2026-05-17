@@ -11,7 +11,7 @@ Solutions include comments explaining the core logic.
 
 | Kata | Difficulty | Concepts |
 |------|-----------|---------|
-| Roman Numerals | 6 kyu | String mapping, loops |
+| Roman Numerals | 4 kyu | String mapping, loops |
 
 ## Skills Practiced
 `Python` `Algorithms` `OOP` `String Manipulation`
