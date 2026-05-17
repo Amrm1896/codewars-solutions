@@ -12,6 +12,7 @@ Solutions include comments explaining the core logic.
 | Kata | Difficulty | Concepts |
 |------|-----------|---------|
 | Roman Numerals | 4 kyu | String mapping, loops |
+| Vigenère Cipher | 4 kyu | cipher, algorithms |
 
 ## Skills Practiced
 `Python` `Algorithms` `OOP` `String Manipulation`
