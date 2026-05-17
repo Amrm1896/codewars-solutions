@@ -1,1 +1,27 @@
-
+class VigenereCipher(object):
+    def __init__(self, key, alphabet):
+        self.key=key
+        self.alphabet=alphabet
+    
+    def encode(self, text):
+        encode_text=""
+        for i,char in enumerate (text):
+            if char not in self.alphabet:
+                encode_text+=char
+                continue 
+            else:
+                index_char=self.alphabet.index(char)
+                index = (index_char + self.alphabet.index(self.key[i % len(self.key)])) % len(self.alphabet) 
+                encode_text+=self.alphabet[index]
+        return encode_text
+    def decode(self, text):
+        decode_text=""
+        for i,char in enumerate (text):
+            if char not in self.alphabet:
+                decode_text+=char
+                continue 
+            else:
+                index_char=self.alphabet.index(char)
+                index = (index_char - self.alphabet.index(self.key[i % len(self.key)]))  % len(self.alphabet)  
+                decode_text+=self.alphabet[index]
+        return decode_text
