@@ -1,0 +1,25 @@
+import re
+
+def simplify(examples, formula):
+    values = {example.split("=")[1].strip(): example.split("=")[0].replace(" ", "") 
+              for example in examples}
+    
+    for key in values:
+        for other_key in values:
+            values[other_key] = values[other_key].replace(key, f"({values[key]})")
+    
+    for key, value in values.items():
+        if key in formula:
+            formula = formula.replace(key, f"({value})")
+    
+    # ضرب ضمني: 3( → 3*( و 70a → 70*a
+    formula = re.sub(r'(\d)\(', r'\1*(', formula)
+    formula = re.sub(r'(\d)([a-zA-Z])', r'\1*\2', formula)
+    
+    # استخرج الحرف الأساسي
+    chars = re.findall(r'[a-zA-Z]', formula)
+    base_char = chars[0]
+    
+    formula = re.sub(base_char, '1', formula)
+    
+    return str(eval(formula)) + base_char
