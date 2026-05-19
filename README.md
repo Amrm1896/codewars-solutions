@@ -11,6 +11,8 @@ Solutions include comments explaining the core logic.
 
 | Kata | Difficulty | Concepts |
 |------|-----------|---------|
+| Simplifying | 3 kyu | Games ,Puzzles|
+| Battleship field validator | 3 kyu | Games ,Arrays ,Algorithms |
 | Roman Numerals | 4 kyu | String mapping, loops |
 | Vigenère Cipher | 4 kyu | cipher, algorithms |
 
